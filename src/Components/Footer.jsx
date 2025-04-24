@@ -8,6 +8,7 @@ import {
     ScrollView,
 } from "react-native"
 import { FontAwesome, Entypo, AntDesign } from "@expo/vector-icons"
+import Ionicons from "@expo/vector-icons/Ionicons"
 
 const footerData = [
     {
@@ -19,7 +20,7 @@ const footerData = [
             },
             {
                 name: "Preguntas frecuentes",
-                href: "https://beltranperu.com/preguntas-frecuentes",
+                href: "https://beltrandelivery.com/preguntas-frecuentes",
             },
             {
                 name: "Términos y condiciones",
@@ -32,11 +33,11 @@ const footerData = [
         items: [
             {
                 name: "Políticas de privacidad",
-                href: "https://beltranperu.com/politicas-de-privacidad",
+                href: "https://beltrandelivery.com/politicas-de-privacidad",
             },
             {
                 name: "Política de envío",
-                href: "https://beltranperu.com/politica-de-envio",
+                href: "https://beltrandelivery.com/politica-de-envio",
             },
         ],
     },
@@ -49,7 +50,7 @@ const footerData = [
             },
             {
                 name: "Zona de cobertura",
-                href: "https://beltranperu.com/lugares-de-entrega",
+                href: "https://beltrandelivery.com/lugares-de-entrega",
             },
         ],
     },
@@ -96,7 +97,21 @@ const Footer = () => {
             ))}
 
             <View style={styles.section}>
+                    <Text style={styles.sectionTitle}>Libro de Reclamaciones</Text>
+                    <Ionicons
+                        name="book-sharp"
+                        size={32}
+                        color="green"
+                        onPress={() =>
+                            Linking.openURL(
+                                "https://beltranperu.com/libro-de-reclamaciones-virtual"
+                            )
+                        }
+                    />
+                </View>
+                        
                 <Text style={styles.sectionTitle}>Síguenos</Text>
+
                 <View style={styles.socials}>
                     {socialLinks.map((item, idx) => (
                         <TouchableOpacity
@@ -107,7 +122,6 @@ const Footer = () => {
                         </TouchableOpacity>
                     ))}
                 </View>
-            </View>
         </ScrollView>
     )
 }
@@ -120,7 +134,7 @@ const styles = StyleSheet.create({
         padding: 16,
     },
     section: {
-        marginBottom: 24,
+        marginBottom: 15,
     },
     sectionTitle: {
         fontSize: 16,
