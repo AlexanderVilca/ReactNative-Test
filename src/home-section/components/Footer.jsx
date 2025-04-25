@@ -7,7 +7,7 @@ import {
     Linking,
     ScrollView,
 } from "react-native"
-import { FontAwesome, Entypo, AntDesign } from "@expo/vector-icons"
+import { FontAwesome, Entypo, AntDesign, FontAwesome5, FontAwesomeIcon, FontAwesome6 } from "@expo/vector-icons"
 import Ionicons from "@expo/vector-icons/Ionicons"
 
 const footerData = [
@@ -58,20 +58,28 @@ const footerData = [
 
 const socialLinks = [
     {
-        icon: <FontAwesome name="facebook" size={24} color="#4267B2" />,
+        icon: <FontAwesome name="facebook-square" size={24} color="green" />,
         href: "https://www.facebook.com/BeltranPeru",
     },
     {
-        icon: <FontAwesome name="instagram" size={24} color="#E1306C" />,
+        icon: <FontAwesome name="instagram" size={24} color="green" />,
         href: "https://www.instagram.com/beltran_peru/",
     },
     {
-        icon: <AntDesign name="linkedin-square" size={24} color="#0A66C2" />,
+        icon: <FontAwesome6 name="x-twitter" size={24} color="green" />,
+        href: "https://twitter.com/BeltranPeru_",
+    },
+    {
+        icon: <AntDesign name="linkedin-square" size={24} color="green" />,
         href: "https://www.linkedin.com/company/belt%C3%A1n-per%C3%BA/",
     },
     {
-        icon: <Entypo name="youtube" size={24} color="red" />,
+        icon: <Entypo name="youtube" size={24} color="green" />,
         href: "https://www.youtube.com/channel/UC2jimDM20ZgpI4tDmxEV6pw",
+    },
+    {
+        icon: <FontAwesome5 name="tiktok" size={24} color="green" />,
+        href: "https://www.tiktok.com/@beltranperu",
     },
 ]
 
