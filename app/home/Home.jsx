@@ -5,6 +5,7 @@ import Footer from "@/src/home-section/components/Footer"
 import YapePromos from "@/src/home-section/components/YapePromos"
 import Header from "@/src/home-section/components/Header"
 import MainBanner from "@/src/home-section/components/MainBanner"
+import HomeCountdown from "@/src/home-section/components/HomeCountdown"
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
                     source={require("../../assets/images/APROVECHA-LAS-PROMOCIONES.png")}
                 />
             </View>
+            <HomeCountdown />
             <YapePromos />
             <OurServices />
             <Footer />
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     image: {
-        width: 370, 
+        width: 370,
         height: 70,
         resizeMode: "contain",
     },
