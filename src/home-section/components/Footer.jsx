@@ -26,18 +26,48 @@ const footerData = [
                 name: "Términos y condiciones",
                 href: "https://beltranperu.com/terminos-y-condiciones-beltran-peru-eirl",
             },
+            {
+                name: "Call Center - Vía WhatsApp",
+                href: "https://api.whatsapp.com/send/?phone=51914399717&text=Hola%2C+quisiera+tener+m%C3%A1s+informaci%C3%B3n+de+los+productos+Beltr%C3%A1n+Per%C3%BA&type=phone_number&app_absent=0",
+                follow: false,
+                target: "_blank",
+            },
+            {
+                name: "Av Cascanueces Mz M Lote 6 Sublote 1 Santa Anita, Lima 15011",
+                href: "https://maps.app.goo.gl/KnDhzYv1EUptnX216",
+                follow: false,
+                target: "_blank",
+            },
         ],
     },
     {
         title: "Tienda online",
         items: [
             {
+                name: "Derechos ARCO",
+                href: "https://forms.gle/t1sN7y6hc75yZiAE9",
+                follow: false,
+                target: "_blank",
+            },
+            {
                 name: "Políticas de privacidad",
-                href: "https://beltrandelivery.com/politicas-de-privacidad",
+                href: "/politicas-de-privacidad",
+                follow: true,
             },
             {
                 name: "Política de envío",
-                href: "https://beltrandelivery.com/politica-de-envio",
+                href: "/politica-de-envio",
+                follow: true,
+            },
+            {
+                name: "Términos y condiciones",
+                href: "/terminos-y-condiciones-online",
+                follow: true,
+            },
+            {
+                name: "Comprobantes electrónicos",
+                href: "/boletas-y-facturas",
+                follow: true,
             },
         ],
     },
@@ -45,12 +75,29 @@ const footerData = [
         title: "Contáctenos",
         items: [
             {
-                name: "Correo: delivery@beltranperu.com",
-                href: "mailto:delivery@beltranperu.com",
+                name: "Nuestras Tiendas",
+                href: "https://beltranperu.com/conocenos/#tiendas",
+                follow: false,
+            },
+            {
+                name: "Nuestras plantas",
+                href: "https://beltranperu.com/conocenos/#plantas",
+                follow: false,
             },
             {
                 name: "Zona de cobertura",
-                href: "https://beltrandelivery.com/lugares-de-entrega",
+                href: "/lugares-de-entrega",
+                follow: true,
+            },
+            {
+                name: "Consultas y sugerencias",
+                href: "/consultas-y-sugerencias",
+                follow: true,
+            },
+            {
+                name: "Correo: delivery@beltranperu.com",
+                href: "mailto:delivery@beltranperu.com",
+                follow: false,
             },
         ],
     },
