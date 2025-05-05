@@ -10,7 +10,6 @@ import {
 import Carousel from "react-native-reanimated-carousel"
 import { useNavigation } from "@react-navigation/native"
 import { AntDesign } from "@expo/vector-icons"
-import Typography from "@/src/Components/pure/ui/Typography"
 
 const { width } = Dimensions.get("window")
 
@@ -52,7 +51,7 @@ const YapePromosCarousel = ({ title = "Yape Promos", href }) => {
         <View style={styles.container}>
             {/* Header */}
             <View style={styles.header}>
-                <Typography style={styles.title}>{title}</Typography>
+                <Text style={styles.title}>{title}</Text>
                 <TouchableOpacity onPress={() => navigation.navigate(href)}>
                     <Text style={styles.link}>Ver más</Text>
                 </TouchableOpacity>

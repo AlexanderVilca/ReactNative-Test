@@ -29,10 +29,10 @@ const MainBannerImages = [
         src: require("../../../assets/images/QUE-TEAM-ERES-PORTOLA-MOBILE.png"),
         alt: "Que team eres Portola",
     },
-    {
-        src: require("../../../assets/images/BANNER-MOBILE-UNETE-A-NUESTROS-CANALES.png"),
-        alt: "Unete a nuestros canales",
-    },
+    // {
+    //     src: require("../../../assets/images/BANNER-MOBILE-UNETE-A-NUESTROS-CANALES.png"),
+    //     alt: "Unete a nuestros canales",
+    // },
 ]
 
 const MainBanner = () => {

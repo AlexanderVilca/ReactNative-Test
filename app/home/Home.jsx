@@ -6,7 +6,9 @@ import YapePromos from "@/src/home-section/components/YapePromos"
 import Header from "@/src/home-section/components/Header"
 import MainBanner from "@/src/home-section/components/MainBanner"
 import HomeCountdown from "@/src/home-section/components/HomeCountdown"
-import Productos from "@/src/home-section/components/Productos"
+import ProductosBeltran from "@/src/home-section/components/products/ProductosBeltran"
+import AceitesBeltran from "@/src/home-section/components/products/AceitesBeltran"
+import AceitesPortola from "@/src/home-section/components/products/AceitesPortola"
 
 const Home = () => {
     return (
@@ -25,7 +27,9 @@ const Home = () => {
                 />
             </View>
             <HomeCountdown />
-            <Productos />
+            <ProductosBeltran />
+            <AceitesBeltran />
+            <AceitesPortola />
             <YapePromos />
             <OurServices />
             <Footer />

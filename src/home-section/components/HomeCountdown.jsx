@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     },
     label: {
         color: "black",
-        fontSize: 6,
+        fontSize: 8,
         fontWeight: "600",
         marginTop: 4,
     },
