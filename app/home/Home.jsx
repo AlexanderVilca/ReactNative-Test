@@ -6,6 +6,7 @@ import YapePromos from "@/src/home-section/components/YapePromos"
 import Header from "@/src/home-section/components/Header"
 import MainBanner from "@/src/home-section/components/MainBanner"
 import HomeCountdown from "@/src/home-section/components/HomeCountdown"
+import Productos from "@/src/home-section/components/Productos"
 
 const Home = () => {
     return (
@@ -24,6 +25,7 @@ const Home = () => {
                 />
             </View>
             <HomeCountdown />
+            <Productos />
             <YapePromos />
             <OurServices />
             <Footer />
