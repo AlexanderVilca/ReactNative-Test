@@ -25,20 +25,16 @@ const Productos = () => {
 
     return (
         <View>
-            <Text style={styles.title}>
-                Sabores extraordinarios
-            </Text>
+            <Text style={styles.title}>Sabores extraordinarios</Text>
             <Image
                 style={styles.image}
                 source={require("@/assets/images/home/SABOR-NUTRICION-MOBILE.png")}
             />
             {products.map((product) => (
-                <>
-                    <Text key={product.sys.id} style={{ padding: 10 }}>
-                        {product.fields.name} - Precio: S/
-                        {product.fields.normalPrice}
-                    </Text>
-                </>
+                <Text key={product.sys.id} style={{ padding: 10 }}>
+                    {product.fields.name} - Precio: S/
+                    {product.fields.normalPrice}
+                </Text>
             ))}
         </View>
     )
