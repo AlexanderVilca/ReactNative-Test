@@ -26,7 +26,9 @@ const Productos = () => {
 
     return (
         <View style={styles.wrapper}>
-            <Text style={styles.title}>Sabores extraordinarios</Text>
+            <Text style={styles.title}>Sabores extraordinarios
+                <Text style={{ color: "green"}}>Ver más</Text>
+            </Text>
             <Image
                 style={styles.image}
                 source={require("@/assets/images/home/SABOR-NUTRICION-MOBILE.png")}
@@ -45,7 +47,7 @@ export default Productos
 
 const styles = StyleSheet.create({
     wrapper: {
-        marginBottom: 20, // agrega separación para no afectar otros componentes
+        marginBottom: 20,
     },
     image: {
         width: "100%",
@@ -55,10 +57,9 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     title: {
-        fontSize: 16,
+        fontSize: 20,
         padding: 10,
         fontWeight: "bold",
-        textAlign: "center",
     },
     productText: {
         padding: 10,

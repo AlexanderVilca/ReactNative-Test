@@ -4,14 +4,14 @@ import CountDown from "react-native-countdown-component"
 
 const { width } = Dimensions.get("window")
 
-const date = new Date("2025-05-24T05:00:00.000Z")
+const date = new Date("2025-05-12T05:00:00.000Z")
 const secondsUntil = Math.floor((date.getTime() - new Date().getTime()) / 1000)
 
 const HomeCountdown = () => {
     return (
         <View style={styles.container}>
             <ImageBackground
-                source={require("@/assets/images/SEMANA DE OFERTAS - VERSION MOBILE.png")}
+                source={require("@/assets/images/SEMANA-DE-OFERTAS-MADRE-MOBILE.webp")}
                 style={styles.banner}
                 resizeMode="contain"
             >
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 0,
     },
     label: {
-        color: "black",
+        color: "white",
         fontSize: 8,
         fontWeight: "600",
         marginTop: 4,

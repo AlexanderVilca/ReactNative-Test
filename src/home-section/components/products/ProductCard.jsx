@@ -9,7 +9,7 @@ const ProductoCard = ({ product }) => {
                 source={{ uri: product.fields.imageUrl }}
                 style={styles.productImage}
             />
-            <Text style={styles.marca}>BELTRÁN</Text>
+            <Text style={styles.marca}>{product.fields.brand.name}</Text>
             <Text style={styles.nombre}>{product.fields.name}</Text>
             <View style={styles.precios}>
                 <Text style={styles.precioAntes}>S/ {product.fields.normalPrice}</Text>
