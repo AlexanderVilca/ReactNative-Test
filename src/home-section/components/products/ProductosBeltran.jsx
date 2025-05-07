@@ -2,6 +2,7 @@ import { View, Text, FlatList, Image, StyleSheet } from "react-native"
 import React, { useState, useEffect } from "react"
 import getProductsByIds from "@/api/models/product/getProductsByIds"
 import { SafeAreaView } from "react-native-safe-area-context"
+import { ScrollView } from "react-native-gesture-handler"
 
 const Productos = () => {
     const [products, setProducts] = useState([])
@@ -24,14 +25,14 @@ const Productos = () => {
     }, [])
 
     return (
-        <View>
+        <View style={styles.wrapper}>
             <Text style={styles.title}>Sabores extraordinarios</Text>
             <Image
                 style={styles.image}
                 source={require("@/assets/images/home/SABOR-NUTRICION-MOBILE.png")}
             />
             {products.map((product) => (
-                <Text key={product.sys.id} style={{ padding: 10 }}>
+                <Text key={product.sys.id} style={styles.productText}>
                     {product.fields.name} - Precio: S/
                     {product.fields.normalPrice}
                 </Text>
@@ -43,15 +44,24 @@ const Productos = () => {
 export default Productos
 
 const styles = StyleSheet.create({
+    wrapper: {
+        marginBottom: 20, // agrega separación para no afectar otros componentes
+    },
     image: {
-        width: "70%",
-        height: "20%",
+        width: "100%",
+        height: 300,
         alignSelf: "center",
         resizeMode: "contain",
+        marginVertical: 10,
     },
     title: {
-        fontSize: 15,
+        fontSize: 16,
         padding: 10,
         fontWeight: "bold",
+        textAlign: "center",
+    },
+    productText: {
+        padding: 10,
+        fontSize: 14,
     },
 })

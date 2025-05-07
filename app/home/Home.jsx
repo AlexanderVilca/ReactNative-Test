@@ -14,8 +14,8 @@ const Home = () => {
     return (
         <ScrollView>
             <Header />
-            <Text>Home</Text>
             <MainBanner />
+            {/* Imágenes promocionales */}
             <View style={styles.container}>
                 <Image
                     style={styles.image}
@@ -27,10 +27,11 @@ const Home = () => {
                 />
             </View>
             <HomeCountdown />
-            <ProductosBeltran />
+            <View style={{ marginBottom: 20 }}>
+                <ProductosBeltran />
+            </View>
             <AceitesBeltran />
             <AceitesPortola />
-            <YapePromos />
             <OurServices />
             <Footer />
         </ScrollView>
