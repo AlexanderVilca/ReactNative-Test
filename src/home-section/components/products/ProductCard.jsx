@@ -6,15 +6,21 @@ const ProductoCard = ({ product }) => {
     return (
         <View style={styles.card}>
             <Image
-                source={{ uri: product.fields.imageUrl }}
+                source={{ uri: product.imageUrl }}
                 style={styles.productImage}
             />
             <Text style={styles.marca}>{product.fields.brand.name}</Text>
             <Text style={styles.nombre}>{product.fields.name}</Text>
             <View style={styles.precios}>
-                <Text style={styles.precioAntes}>S/ {product.fields.normalPrice}</Text>
-                <Text style={styles.precioDescuento}>S/ {product.fields.discountPrice}</Text>
-                <Text style={styles.descuento}>{product.fields.discountPercent}%</Text>
+                <Text style={styles.precioAntes}>
+                    S/ {product.fields.normalPrice}
+                </Text>
+                <Text style={styles.precioDescuento}>
+                    S/ {product.fields.discountPrice}
+                </Text>
+                <Text style={styles.descuento}>
+                    {product.fields.discountPercent}%
+                </Text>
             </View>
             <TouchableOpacity style={styles.boton}>
                 <Text style={styles.textoBoton}>Agregar</Text>
