@@ -1,6 +1,7 @@
-import { View, Text } from "react-native"
+import { View, Text, StyleSheet, Image, FlatList } from "react-native"
 import React, { useState, useEffect } from "react"
 import getProductsByIds from "@/api/models/product/getProductsByIds"
+import ProductoCard from "./ProductCard"
 
 const AceitesBeltran = () => {
 
@@ -23,13 +24,46 @@ const AceitesBeltran = () => {
 
 
     return (
-        <View>
-            <Text style={{ fontSize: 15, padding: 10 }}>Calidad excepcional</Text>
-            {products.map((product) => (
-                <Text key={product.sys.id} style={{padding: 10}}>{product.fields.name}</Text>
-            ))}
+        <View style={styles.wrapper}>
+            <Text style={styles.title}>
+                Calidad Excepcional <Text style={styles.link}>Ver más</Text>
+            </Text>
+            <Image
+                style={styles.image}
+                source={require("@/assets/images/home/BELTRAN-ACEITE-MOBILE.webp")}
+            />
+            <FlatList
+                horizontal
+                data={products}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => <ProductoCard product={item} />}
+                showsHorizontalScrollIndicator={false}
+            />
         </View>
     )
 }
 
 export default AceitesBeltran
+
+const styles = StyleSheet.create({
+    wrapper: {
+        marginBottom: 20,
+    },
+    image: {
+        width: "100%",
+        height: 300,
+        alignSelf: "center",
+        resizeMode: "contain",
+        marginVertical: 10,
+    },
+    title: {
+        fontSize: 20,
+        padding: 10,
+        fontWeight: "bold",
+    },
+    link: {
+        fontSize: 16,
+        color: "green",
+        fontWeight: "bold",
+    },
+})

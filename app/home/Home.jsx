@@ -27,11 +27,10 @@ const Home = () => {
                 />
             </View>
             <HomeCountdown />
-            <View style={{ marginBottom: 20 }}>
-                <ProductosBeltran />
-            </View>
+            <ProductosBeltran />
             <AceitesBeltran />
             <AceitesPortola />
+            {/* <YapePromos /> */}
             <OurServices />
             <Footer />
         </ScrollView>

@@ -3,24 +3,38 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native"
 import React from "react"
 
 const ProductoCard = ({ product }) => {
+    const hasDiscount =
+        product.fields.discountPrice &&
+        product.fields.discountPrice < product.fields.normalPrice
+
     return (
         <View style={styles.card}>
             <Image
-                source={{ uri: product.imageUrl }}
+                source={{ uri: product.fields.mainPicture }}
                 style={styles.productImage}
             />
             <Text style={styles.marca}>{product.fields.brand.name}</Text>
             <Text style={styles.nombre}>{product.fields.name}</Text>
             <View style={styles.precios}>
-                <Text style={styles.precioAntes}>
-                    S/ {product.fields.normalPrice}
-                </Text>
-                <Text style={styles.precioDescuento}>
-                    S/ {product.fields.discountPrice}
-                </Text>
-                <Text style={styles.descuento}>
-                    {product.fields.discountPercent}%
-                </Text>
+                {hasDiscount ? (
+                    <>
+                        <Text style={styles.precioAntes}>
+                            S/ {product.fields.normalPrice.toFixed(2)}
+                        </Text>
+                        <Text style={styles.precioDescuento}>
+                            S/ {Number(product.fields.discountPrice).toFixed(2)}
+                        </Text>
+                        <Text style={styles.descuento}>
+                            - {product.fields.discountPercent}%
+                        </Text>
+                    </>
+                ) : (
+                    <View style={styles.precioPrincipalContainer}>
+                        <Text style={styles.precioPrincipal}>
+                            S/ {product.fields.normalPrice.toFixed(2)}
+                        </Text>
+                    </View>
+                )}
             </View>
             <TouchableOpacity style={styles.boton}>
                 <Text style={styles.textoBoton}>Agregar</Text>
@@ -73,7 +87,7 @@ const styles = StyleSheet.create({
     precioDescuento: {
         fontSize: 14,
         fontWeight: "bold",
-        color: "#000",
+        color: "green",
     },
     descuento: {
         fontSize: 12,
@@ -90,5 +104,13 @@ const styles = StyleSheet.create({
     textoBoton: {
         color: "#fff",
         fontWeight: "bold",
+    },
+    precioPrincipalContainer: {
+        alignItems: "flex-end",
+    },
+    precioPrincipal: {
+        fontSize: 14,
+        fontWeight: "bold",
+        color: "green",
     },
 })

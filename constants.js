@@ -1,0 +1,4 @@
+const SPACE_ID = "vkdsye91qcu6"
+const ACCESS_TOKEN = "ZUUqv5Hk84NsStGiU-O1o1PWJ87auWeqi79ZHGWlh2E"
+
+export { SPACE_ID, ACCESS_TOKEN }

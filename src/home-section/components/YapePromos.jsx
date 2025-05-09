@@ -84,12 +84,12 @@ const YapePromosCarousel = ({ title = "Yape Promos", href }) => {
                     )}
                 />
 
-                {/* Left Arrow */}
+                {/* Botón Izquierdo */}
                 <TouchableOpacity style={styles.leftArrow} onPress={handlePrev}>
                     <AntDesign name="leftcircleo" size={32} color="white" />
                 </TouchableOpacity>
 
-                {/* Right Arrow */}
+                {/* Botón Derecho */}
                 <TouchableOpacity
                     style={styles.rightArrow}
                     onPress={handleNext}
