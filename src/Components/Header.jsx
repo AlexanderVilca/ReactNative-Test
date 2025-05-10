@@ -13,11 +13,11 @@ const { width } = Dimensions.get("window")
 
 const BannerMobile = [
     {
-        src: require("../../../assets/images/HEADER-BANNER-MOVIL.png"),
+        src: require("@/assets/images/HEADER-BANNER-MOVIL.png"),
         alt: "Haz tu pedido a través de nuestro Whatsapp Banner",
     },
     {
-        src: require("../../../assets/images/HEADER-BANNER-MOVIL-2.png"),
+        src: require("@/assets/images/HEADER-BANNER-MOVIL-2.png"),
         alt: "Encuentra todas nuestras promociones a través de nuestro Beltránfono",
     },
 ];
